@@ -7,4 +7,11 @@ Rails.application.routes.draw do
   
   get "/second_movie", controller: "movies", action: "second_movie"
 
+
+  get "/single_actor_query" => "actors#single_actor_query"
+
+  get "/single_actor_segment/:id" => "actors#single_actor_segment"
+
+  post "/single_actor_body" => "actors#single_actor_body"
+
 end
