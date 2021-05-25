@@ -41,4 +41,6 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
 
+  post "/session" => "sessions#create"
+
 end
