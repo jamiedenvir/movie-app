@@ -19,11 +19,7 @@ class MoviesController < ApplicationController
       plot: params[:plot],
       director: params[:director],
       english: params[:english]
-
       )
-    movie.save
-    render json: movie.as_json
-
     if movie.save
       render json: movie
     else
@@ -38,9 +34,6 @@ class MoviesController < ApplicationController
     movie.plot = params[:plot] || movie.plot
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
-
-    movie.save
-    render json: movie.as_json
     if movie.save
       render json: movie
     else
